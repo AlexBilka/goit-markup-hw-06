@@ -15,7 +15,7 @@
   --overlay-col: rgba(33, 150, 243, 0.9);
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --backdrop-col: rgba(0, 0, 0, 0.2);
-  --animation-time: 1000ms;
+  --animation-time: 250ms;
   --form-col: rgba(33, 33, 33, 0.2);
 }
 
@@ -673,7 +673,6 @@ img {
 .modal-coment:hover,
 .modal-coment:focus {
   border: 1px solid var(--accent);
-  cursor: pointer;
 }
 .check-text {
   display: flex;
