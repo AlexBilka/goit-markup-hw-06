@@ -15,7 +15,7 @@
   --overlay-col: rgba(33, 150, 243, 0.9);
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --backdrop-col: rgba(0, 0, 0, 0.2);
-  --animation-time: 250ms;
+  --animation-time: 1000ms;
   --form-col: rgba(33, 33, 33, 0.2);
 }
 
@@ -375,7 +375,7 @@ img {
 }
 .client-list {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 .client-link {
   display: block;
@@ -595,6 +595,7 @@ img {
   background-color: var(--white);
   outline: transparent;
   cursor: pointer;
+  transition: fill var(--animation-time) var(--cubic-function);
 }
 .modal-close:hover,
 .modal-close:focus {
@@ -641,10 +642,15 @@ img {
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
+  transition: border-color var(--animation-time) var(--cubic-function);
 }
 .modal-input:hover,
 .modal-input:focus {
   border: 1px solid var(--accent);
+}
+.modal-icon,
+.modal-icon {
+  transition: fill var(--animation-time) var(--cubic-function);
 }
 .modal-input:hover + .modal-icon,
 .modal-input:focus + .modal-icon {
@@ -662,10 +668,12 @@ img {
   background-color: transparent;
   outline: transparent;
   resize: none;
+  transition: border-color var(--animation-time) var(--cubic-function);
 }
 .modal-coment:hover,
 .modal-coment:focus {
   border: 1px solid var(--accent);
+  cursor: pointer;
 }
 .check-text {
   display: flex;
@@ -685,7 +693,10 @@ img {
   justify-content: center;
   fill: transparent;
 }
-
+.check-text span {
+  transition: background-color var(--animation-time) var(--cubic-function),
+    border-color var(--animation-time) var(--cubic-function);
+}
 .modal-check:checked + .check-text span {
   background-color: var(--accent);
   border: none;
@@ -693,6 +704,10 @@ img {
 }
 .modal-field {
   position: relative;
+}
+.modal-check:hover + .check-text span {
+  border-color: var(--accent);
+  cursor: pointer;
 }
 
 .modal-check:focus + .check-text span {
@@ -726,6 +741,9 @@ img {
 .modal-btn:focus {
   background-color: var(--second-btn-color);
 }
+
+/*-----follow-form-------*/
+
 .follow-form-wrap {
   margin-left: auto;
 }
@@ -749,14 +767,14 @@ img {
   background-color: transparent;
   color: var(--white);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;  
+  border-radius: 4px;
   outline: transparent;
 }
 .follow-form-btn {
   display: flex;
   align-items: center;
   padding-left: 28px;
-  width: 200px;  
+  width: 200px;
   border-radius: 4px;
 
   font-family: inherit;
