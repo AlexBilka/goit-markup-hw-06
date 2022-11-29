@@ -755,7 +755,6 @@ img {
 }
 .follow-form {
   display: flex;
-  position: relative;
 }
 .follow-form-input {
   width: 358px;
