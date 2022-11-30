@@ -764,6 +764,11 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: transparent;
+  transition: border-color var(--animation-time) var(--cubic-function);
+}
+.follow-form-input:hover,
+.follow-form-input:focus {
+  border: 1px solid var(--white);
 }
 .follow-form-btn {
   display: flex;
